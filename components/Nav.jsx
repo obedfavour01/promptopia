@@ -10,7 +10,7 @@ import {signIn,signOut,useSession,getProviders} from 'next-auth/react';
 
 
 const Nav = () => {
-
+  
 const {data: session} = useSession()
 
   const [providers, setProviders] = useState(null)
@@ -122,20 +122,20 @@ const {data: session} = useSession()
                             href = "/profile"
                             className = "dropdown_link"
                             onClick = {() => setToggleDropdown(false)}
-                            >
+                          >
                               My profile
-                            </Link>
+                          </Link>
 
 
-                            <Link 
+                          <Link 
                             href = "/profile"
                             className = "dropdown_link"
                             onClick = {() => setToggleDropdown(false)}
-                            >
+                          >
                               Create Prompt
-                            </Link>
+                          </Link>
 
-                            <button 
+                          <button 
                             type="button"
                             className = "mt-5 w-full black_btn" 
                             onClick = {() => {
@@ -143,9 +143,9 @@ const {data: session} = useSession()
                               signOut();
 
                             }} 
-                            >
+                          >
                               Sign Out
-                            </button>
+                          </button>
                       </div>
                     )} 
 

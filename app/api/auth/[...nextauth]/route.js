@@ -1,10 +1,14 @@
 import NextAuth from "next-auth/next";
+import { NextResponse } from "next/server";
 import GoogleProvider from 'next-auth/providers/google';
 import { connectToDB } from "@utils/database";
 import User from "@models/user";
 
+export const config = {
+    runtime: 'edge'
+}
 
-const handler = NextAuth({
+const handler = NextAuth({ 
     providers: [
         GoogleProvider({
             clientId : process.env.GOOGLE_ID,
